@@ -1,0 +1,60 @@
+{
+    "name": "first-network-iimudaipur",
+    "version": "1.0.0",
+    "client": {
+        "organization": "iimudaipur",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "3000"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "iimudaipur": {
+            "mspid": "iimudaipurMSP",
+            "peers": [
+                "peer0.iimudaipur.com",
+                "peer1.iimudaipur.com"
+            ],
+            "certificateAuthorities": [
+                "ca-iimudaipur"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.iimudaipur.com": {
+            "url": "grpcs://localhost:7051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICUDCCAfagAwIBAgIRAMyNRo40ouvJemDvRERgrsIwCgYIKoZIzj0EAwIwcjEL\nMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG\ncmFuY2lzY28xFzAVBgNVBAoTDmlpbXVkYWlwdXIuY29tMR0wGwYDVQQDExR0bHNj\nYS5paW11ZGFpcHVyLmNvbTAeFw0yMjAzMjQwNzA4MDBaFw0zMjAzMjEwNzA4MDBa\nMHIxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1T\nYW4gRnJhbmNpc2NvMRcwFQYDVQQKEw5paW11ZGFpcHVyLmNvbTEdMBsGA1UEAxMU\ndGxzY2EuaWltdWRhaXB1ci5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASc\nf8ZEWYa4iRX/bM+2G8Zewg7UmoUlBGOmahet0QfhW/3WcJSEXjdRJEqj51eZOpX7\n4Vb2tQQwd6qYwidbsCaSo20wazAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYI\nKwYBBQUHAwIGCCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIA9j\nXKpr33R+J9Gat9Dfy7L8dezVMqYjvqMmW6rEIgXdMAoGCCqGSM49BAMCA0gAMEUC\nIBIptzNePMMcFT1XLAC+2fWLYB5FXUdfOlBmcGKLB6NtAiEAimNiabuwQrOg1lou\n3aDgwvWDCRx++c+mULM61DZQJJQ=\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.iimudaipur.com",
+                "hostnameOverride": "peer0.iimudaipur.com"
+            }
+        },
+        "peer1.iimudaipur.com": {
+            "url": "grpcs://localhost:9051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICUDCCAfagAwIBAgIRAMyNRo40ouvJemDvRERgrsIwCgYIKoZIzj0EAwIwcjEL\nMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG\ncmFuY2lzY28xFzAVBgNVBAoTDmlpbXVkYWlwdXIuY29tMR0wGwYDVQQDExR0bHNj\nYS5paW11ZGFpcHVyLmNvbTAeFw0yMjAzMjQwNzA4MDBaFw0zMjAzMjEwNzA4MDBa\nMHIxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1T\nYW4gRnJhbmNpc2NvMRcwFQYDVQQKEw5paW11ZGFpcHVyLmNvbTEdMBsGA1UEAxMU\ndGxzY2EuaWltdWRhaXB1ci5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASc\nf8ZEWYa4iRX/bM+2G8Zewg7UmoUlBGOmahet0QfhW/3WcJSEXjdRJEqj51eZOpX7\n4Vb2tQQwd6qYwidbsCaSo20wazAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYI\nKwYBBQUHAwIGCCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIA9j\nXKpr33R+J9Gat9Dfy7L8dezVMqYjvqMmW6rEIgXdMAoGCCqGSM49BAMCA0gAMEUC\nIBIptzNePMMcFT1XLAC+2fWLYB5FXUdfOlBmcGKLB6NtAiEAimNiabuwQrOg1lou\n3aDgwvWDCRx++c+mULM61DZQJJQ=\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer1.iimudaipur.com",
+                "hostnameOverride": "peer1.iimudaipur.com"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "ca-iimudaipur": {
+            "url": "https://localhost:7054",
+            "caName": "ca-iimudaipur",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICSTCCAe+gAwIBAgIQPYKCW1mCIEb7SLopvgEmHzAKBggqhkjOPQQDAjBvMQsw\nCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy\nYW5jaXNjbzEXMBUGA1UEChMOaWltdWRhaXB1ci5jb20xGjAYBgNVBAMTEWNhLmlp\nbXVkYWlwdXIuY29tMB4XDTIyMDMyNDA3MDgwMFoXDTMyMDMyMTA3MDgwMFowbzEL\nMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG\ncmFuY2lzY28xFzAVBgNVBAoTDmlpbXVkYWlwdXIuY29tMRowGAYDVQQDExFjYS5p\naW11ZGFpcHVyLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABCmh1I7ZubiN\nKB/NKGwbQ2h0J+UnFwlalxh5KYs4JWcmFmdGGctRE5O7T+C+Nxc32wVJwO4mGS/8\nUyPoFuZvw2qjbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcD\nAgYIKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgNLbAYr9hphKp\nytNrm0e0lsbEX4f4N67dzW5vp7GPmp0wCgYIKoZIzj0EAwIDSAAwRQIhAK1ADCIX\nDhKOD0RgeUxGXRRntgLONhYISyrtxswd1T64AiBRvQ3Qq3RQNpoR0TkHTuYdhz1X\nFW0qzJKLH756xKMuqQ==\n-----END CERTIFICATE-----\n"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}
